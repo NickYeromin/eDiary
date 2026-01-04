@@ -1,13 +1,366 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+	--main-blue: #00bfff;
+	--accent-orange: #ff8c00;
+	--hover-blue: #4ed3ff;
+	--text-dark: #33333380;
+	--bg-light: #f0f4f8;
+
+	--margin-classic: 5px;
+	--main-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.59);
+	--tr-center: translate(-50%, -50%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+	margin: 0;
+	font-family: "Lato", sans-serif;
+}
+
+h2 {
+	margin: 5px;
+	margin-bottom: 15px;
+	color: var(--text-dark);
+	font-size: 50px;
+	white-space: nowrap;
+}
+
+button {
+	cursor: pointer;
+}
+
+.blue_button {
+	margin: 7px;
+	width: 200px;
+	height: 30px;
+	background-color: var(--main-blue);
+	&:hover {
+		background-color: var(--hover-blue);
+	}
+}
+.gray_button {
+	margin: 7px;
+	width: 200px;
+	height: 30px;
+	background-color: var(--bg-light);
+	&:hover {
+		background-color: var(--text-dark);
+		color: white;
+	}
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+	height: 7vh;
+	align-items: center;
+	background-color: var(--main-blue);
+	width: 100%;
+}
+
+header span {
+	font-weight: bold;
+}
+
+header button {
+	margin: 5px;
+	padding: 3px;
+}
+
+/*-----------------------------------------*/
+
+.conteiner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.conteiner-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.conteiner-m25 {
+	margin: 25px;
+}
+/*-----------------------------------------*/
+.loadform {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 150px;
+	font-size: 50px;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	width: 150px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	padding: 6px;
+	background: conic-gradient(
+				from 135deg at top,
+				currentColor 90deg,
+				rgba(0, 0, 0, 0) 0
+			)
+			0 calc(50% - 4px) / 17px 8.5px,
+		radial-gradient(
+				farthest-side at bottom left,
+				rgba(0, 0, 0, 0) calc(100% - 6px),
+				currentColor calc(100% - 5px) 99%,
+				rgba(0, 174, 255, 0)
+			)
+			top right/50% 50% content-box content-box,
+		radial-gradient(
+				farthest-side at top,
+				rgba(0, 0, 0, 0) calc(100% - 6px),
+				currentColor calc(100% - 5px) 99%,
+				rgba(0, 0, 0, 0)
+			)
+			bottom/100% 50% content-box content-box;
+	background-repeat: no-repeat;
+	animation: l11 1s infinite linear;
+}
+
+@keyframes l11 {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+/*-----------------------------------------*/
+
+.loginform {
+	position: absolute;
+	padding: 50px;
+	top: 50%;
+	left: 50%;
+	transform: var(--tr-center);
+	background-color: var(--main-blue);
+	box-shadow: var(--main-shadow);
+	border-radius: 3px;
+}
+
+.loginform span {
+	margin: 5px;
+}
+.loginform input {
+	height: 25px;
+}
+
+.loginform > button {
+	background-color: #00bfff;
+	margin-top: 25px;
+	width: 160px;
+	height: 60px;
+	border-radius: 3px;
+	&:hover {
+		background-color: var(--hover-blue);
+	}
+	&:active {
+		background-color: var(--text-dark);
+	}
+}
+
+/*-----------------------------------------*/
+
+.timeTable {
+	width: 20%;
+	margin: 5px;
+	/* background-color: var(--text-dark); */
+	border: 2px solid;
+	border-collapse: collapse;
+}
+
+.timeTable tr {
+	border: 1px dotted;
+}
+
+.timeTable > thead {
+	background-color: var(--main-blue);
+}
+
+.dayTimeTable {
+	background-color: var(--accent-orange);
+}
+
+/*-----------------------------------------*/
+
+.diary {
+	margin: 15px;
+	width: 800px;
+}
+
+.diary > span {
+	color: var(--accent-orange);
+	font-size: 24px;
+	font-weight: bold;
+	align-content: start;
+	margin: 20px;
+}
+
+.diary table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.diary .numLesson {
+	width: 3%;
+	background-color: var(--main-blue);
+	border: 1px solid;
+}
+
+.diary .valueLesson {
+	width: 30%;
+	background-color: var(--main-blue);
+	border: 1px solid;
+}
+
+.diary .valueHomework {
+	background-color: white;
+	border: 1px solid;
+}
+
+/*-----------------------------------------*/
+
+.events {
+	margin: 5vh;
+	font-size: 3vh;
+}
+
+/*-----------------------------------------*/
+
+.helloScreen_user {
+	color: var(--mo-blue);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.eDiary_BG {
+	position: absolute;
+	left: 50%;
+	bottom: 20%;
+	transform: translate(-50%, -50%);
+	color: #00bfff2f;
+	/* color: #495057; */
+	font-size: 100px;
+	font-weight: bold;
+	white-space: nowrap;
+	user-select: none;
+}
+
+/*-----------------------------------------*/
+
+.addNewUser {
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-blue);
+	width: 400px;
+	/* border: 1px solid; */
+	padding: 15px;
+	margin: 15px;
+	border-radius: 5px;
+	box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.59);
+}
+
+.addNewUser > span,
+.addNewUser > input,
+.addNewUser > button,
+.addNewUser > .addNewStudent_select {
+	margin: 5px;
+	height: 25px;
+}
+.addNewUser select {
+	margin: 5px;
+	height: 25px;
+	width: 50px;
+}
+
+/*-----------------------------------------*/
+
+.studentsBook {
+	/* background-color: var(--accent-orange); */
+	margin: 28px;
+	width: 500px;
+}
+
+.studentsBook > span {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.studentsBook > details {
+	background-color: var(--bg-light);
+	border-radius: 5px;
+	margin: 7px;
+	border-color: black;
+	border: 1px solid black;
+}
+
+.studentsBook > details > summary {
+	background-color: var(--main-blue);
+	padding-left: 14px;
+	padding-right: 14px;
+	display: flex;
+	justify-content: space-between;
+	padding: 7px;
+	font-size: 1.4em;
+	cursor: pointer;
+	&:hover {
+		background-color: var(--hover-blue);
+	}
+}
+
+.studentsBook > details > p {
+	text-align: left;
+}
+
+.studentsBook > details > p > span {
+	width: 80%;
+	margin: 12px;
+	text-align: left;
+}
+
+.studentsBook > details > p > span > span {
+	background-color: white;
+	border: 1px solid black;
+	margin-left: 7px;
+	padding: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border-radius: 3px;
+}
+/* summary::-webkit-details-marker {
+	display: none;
+}
+summary::-moz-list-bullet {
+	list-style-type: none;
+}
+summary::marker {
+	display: none;
+} */
+
+/*-----------------------------------------*/
+
+@media (max-width: 1000px) {
+	.timeTable_general {
+		font-size: 9px;
+	}
+
+	.diary {
+		/* width: 900px; */
+	}
 }
