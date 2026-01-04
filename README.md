@@ -1,74 +1,68 @@
-<<<<<<< HEAD
 # eDiary
-=======
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📚About the Project
+***eDiary - A smart assistant to help you study effectively!***
 
-## Available Scripts
+**eDiary**- The project was created for educational purposes to improve practical skills. Its goal is to unite teachers and students and support educational activities.
 
-In the project directory, you can run:
+## 🖥️ Demo
+**An authorization form has been implemented for the user.**
 
-### `npm start`
+After authorization, the rules for the user change slightly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The student can only view the information. The teacher can view and edit the areas.
+<p align="center">
+  <img src="./Demo/user/image.png" alt="Authorization form">
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Viewing the application from the perspective of a student user:**
 
-### `npm test`
+<p align="center>
+  
+  <img src="./Demo/user/image1.png" alt="View of the welcome screen.">
+  View of the welcome screen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <img src="./Demo/user/image2.png" alt="View of the timetable screen.">
+  View of the timetable screen.
 
-### `npm run build`
+  <img src="./Demo/user/image3.png" alt="View of the diary screen.">
+  View of the diary screen.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <img src="./Demo/user/image4.png">
+  View of the events screen.
+  
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Technologies
 
-### `npm run eject`
+**Front-end**
+- **React** - Renders the user interface.
+- **JavaScript** - Implements the logic and interaction with the back-end.
+- **CSS3** — Design screens.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Back-end**
+- **JavaScript** - Logic for server and connection front-end to database.
+- **MongoDB** - Database (storing user data).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Installation and Run Project
+```bash
+# Clone the repository
+git clone https://github.com/NickYeromin/eDiary.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Run Front-End (open the root folder of the project)
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Run Back-End server (open the server folder)
+node server.js
 
-## Learn More
+# If you runnig project in demo version database, this user data for autorization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Student:
+-Login: user123
+-Password: qwerty123
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#Teacher:
+-Login: admin123
+-Password: admin123
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 52cf867 (Initialize project using Create React App)
